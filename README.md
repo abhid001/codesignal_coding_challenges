@@ -1,2 +1,2 @@
 # codesignal_coding_challenges
-Coding challenges asked in codesignal
+My programming solutions to programming challenges at codesignal.com
