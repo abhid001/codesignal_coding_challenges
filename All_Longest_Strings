@@ -1,0 +1,38 @@
+'''
+Given an array of strings, return another array containing all of its longest strings.
+
+Example
+
+For inputArray = ["aba", "aa", "ad", "vcd", "aba"], the output should be
+solution(inputArray) = ["aba", "vcd", "aba"].
+
+Input/Output
+
+[execution time limit] 4 seconds (py3)
+
+[input] array.string inputArray
+
+A non-empty array.
+
+Guaranteed constraints:
+1 ≤ inputArray.length ≤ 10,
+1 ≤ inputArray[i].length ≤ 10.
+
+[output] array.string
+
+Array of the longest strings, stored in the same order as in the inputArray.
+
+'''
+def all_longest_strings(inputArray):
+    list_longest_string = []
+    max_count = len(max(inputArray, key=len))
+    
+    for x in range(len(inputArray)):
+        if len(inputArray[x]) >= len(inputArray[x - 1]) and len(inputArray[x]) >= max_count:
+            max_count = len(inputArray[x])
+            list_longest_string.append(inputArray[x])
+
+    return list_longest_string  
+    
+    
+ all_longest_strings(["enyky", "benyky", "yely", "varennyky"])
