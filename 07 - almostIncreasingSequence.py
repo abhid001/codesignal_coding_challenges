@@ -43,3 +43,4 @@ def almostIncreasingSequence(sequence):
         return True  # Deleting later element makes increasing
     return False  # Deleting either does not make increasing
 
+almostIncreasingSequence([1, 3, 2, 1])
