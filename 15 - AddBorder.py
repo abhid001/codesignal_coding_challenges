@@ -16,8 +16,5 @@ solution(picture) = ["*****",
 '''
 
 def solution(picture):
-    picture = ["*" + string + "*" for string in picture]
-    print(picture)
-    picture = [("*" * len(picture[0]))] + picture + [("*" * len(picture[0]))]
-    print(picture)
-    return picture
+    l=len(picture[0])+2
+    return ["*"*l]+[x.center(l,"*") for x in picture]+["*"*l]
